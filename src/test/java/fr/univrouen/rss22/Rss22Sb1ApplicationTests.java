@@ -2,12 +2,18 @@ package fr.univrouen.rss22;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.Resource;
 
 @SpringBootTest
-class Rss22Sb1ApplicationTests {
+public class Rss22Sb1ApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+//	@Test
+//	 public String loadFileXML(Resource resource) {
+//		 resource = new DefaultResourceLoader().
+//		getResource("classpath:xml/item.xml");
+//
+//		 return resource.toString();
+//	}
 
 }
