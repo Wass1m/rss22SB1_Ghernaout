@@ -1,0 +1,32 @@
+.logo {
+    height: 100px;
+    width: 400px;
+}
+
+.actions {
+    display: flex;
+}
+
+.actions a {
+    margin-left: 10px;
+}
+
+table {
+    margin-top: 20px;
+}
+
+.forms {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+}
+
+.forms > input {
+    margin: 30px 0px;
+}
+
+.sub-button {
+    width: 100px;
+}
+

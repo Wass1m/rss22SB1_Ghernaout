@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss22:feed lang="fr-007" xmlns:rss22="http://univrouen.fr/rss22" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univrouen.fr/rss22">
+    <title>TP4 - Flux RSS22</title>
+    <pubDate>2022-03-12T09:50:20</pubDate>
+    <copyright>Wassim Ghernaout</copyright>
+    <link href="" rel="self" type=""/>
+    <item>
+        <guid>18930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>Semi conducteurs : intel acte un invetissement....</title>
+        <category term="Tech Media"/>
+        <published>2021-03-11T09:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Wassim</name>
+        </author>
+    </item>
+
+    <item>
+        <guid>28930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>La DGCCRF s'attaque aux ventes de smartphones</title>
+        <category term="Tech Media"/>
+        <published>2022-04-14T09:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+    <item>
+        <guid>38930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>En Ukraine, la plus grande centrale nucleaire</title>
+        <category term="Internationale"/>
+        <published>2022-04-12T09:50:20</published>
+        <image href="https://www.ipreunion.com/medias/source/0148533001646127464.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+
+    <item>
+        <guid>48930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>La "lente" decrue des inegalites entre les ...</title>
+        <category term="Societe"/>
+        <published>2022-01-17T18:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+    <item>
+        <guid>58930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>La "rapide" decrue des inegalites entre les ...</title>
+        <category term="Societe"/>
+        <published>2022-01-16T18:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+    <item>
+        <guid>68930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>Additional Semi conducteurs : intel acte un invetissement....</title>
+        <category term="Tech Media"/>
+        <published>2021-03-11T09:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Wassim</name>
+        </author>
+    </item>
+
+    <item>
+        <guid>78930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>Additional La DGCCRF s'attaque aux ventes de smartphones</title>
+        <category term="Tech Media"/>
+        <published>2022-04-14T09:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+    <item>
+        <guid>88930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>Additional En Ukraine, la plus grande centrale nucleaire</title>
+        <category term="Internationale"/>
+        <published>2022-04-12T09:50:20</published>
+        <image href="https://www.ipreunion.com/medias/source/0148533001646127464.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+
+    <item>
+        <guid>98930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>Additional La "lente" decrue des inegalites entre les ...</title>
+        <category term="Societe"/>
+        <published>2022-01-17T18:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+    <item>
+        <guid>108930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>Additional La "rapide" decrue des inegalites entre les ...</title>
+        <category term="Societe"/>
+        <published>2022-01-16T18:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
+
+</rss22:feed>
+

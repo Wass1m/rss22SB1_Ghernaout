@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns="http://univrouen.fr/rss22"
+           targetNamespace="http://univrouen.fr/rss22"
+           elementFormDefault="unqualified" >
+
+    <xs:element name="feed" type="feedType" />
+
+    <xs:complexType name="feedType">
+        <xs:sequence>
+            <xs:element name="title" type="StringLimit128" minOccurs="1" maxOccurs="1" />
+            <xs:element name="pubDate" type="xs:dateTime" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="copyright" type="StringLimit128" minOccurs="1" maxOccurs="1" />
+            <xs:element name="link" type="linkType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:element name="item" type="itemType" minOccurs="1" maxOccurs="10"/>
+        </xs:sequence>
+        <xs:attribute name="lang" type="langue" use="required"   />
+    </xs:complexType>
+
+
+    <xs:complexType name="linkType">
+        <xs:attribute name="rel" type="relType" use="required"/>
+        <xs:attribute name="type" type="mimeType" use="required"/>
+        <xs:attribute name="href" type="urlType" use="required"/>
+    </xs:complexType>
+
+    <xs:complexType name="itemType">
+        <xs:sequence>
+            <xs:element name="guid" minOccurs="1" maxOccurs="1" />
+            <xs:element name="title" type="StringLimit128" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="category" type="categoryType" minOccurs="1" maxOccurs="unbounded"/>
+            <xs:choice>
+                <xs:element name="published" type="xs:dateTime" minOccurs="1" maxOccurs="1" />
+                <xs:element name="updated" type="xs:dateTime" minOccurs="1" maxOccurs="1" />
+            </xs:choice>
+            <xs:element name="image" type="imageType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="content" type="contentType" minOccurs="1" maxOccurs="1"/>
+            <xs:choice>
+                <xs:element name="author" type="authorType" />
+                <xs:element name="contributor" type="authorType"  />
+            </xs:choice>
+
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="authorType">
+        <xs:all>
+            <xs:element name="name" type="StringLimit64" minOccurs="1" maxOccurs="1"/>
+            <xs:element name="email" type="emailType" minOccurs="0" maxOccurs="1"/>
+            <xs:element name="uri" minOccurs="0" maxOccurs="1"/>
+        </xs:all>
+    </xs:complexType>
+
+
+    <xs:simpleType name="StringLimit128">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="128" />
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="StringLimit64">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="64" />
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="textType">
+        <xs:restriction base="xs:string" >
+            <xs:pattern value="[a-zA-Z0-9\s\-/+]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+    <xs:complexType name="categoryType">
+        <xs:attribute name="term" type="textType" use="required"/>
+    </xs:complexType>
+
+
+
+    <xs:simpleType name="urlType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[a-zA-Z0-9\.,:;~@()\-&apos;&amp;#!?$*=/]*"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="mimeType">
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="emailType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-zA-Z0-9._\-'])*@([a-zA-Z0-9._\-'])*.[a-zA-Z][a-zA-Z]"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+    <xs:simpleType name="langue">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="([a-z]){2,3}-([A-Z]{2}|[0-9]{3})"></xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:simpleType name="relType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="self"></xs:enumeration>
+            <xs:enumeration value="alternate"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="imageType">
+        <xs:attribute name="type" type="imgTypeEnum" use="required"/>
+        <xs:attribute name="href" type="urlType" use="required"/>
+        <xs:attribute name="alt" type="textType" use="required"/>
+        <xs:attribute name="length" type="xs:int" />
+    </xs:complexType>
+
+    <xs:simpleType name="imgTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="GIF"></xs:enumeration>
+            <xs:enumeration value="BMP"></xs:enumeration>
+            <xs:enumeration value="JPG"></xs:enumeration>
+            <xs:enumeration value="PNG"></xs:enumeration>
+            <xs:enumeration value="JPEG"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+    <xs:complexType name="contentType">
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute name="type" type="contentTypeEnum" use="required" />
+                <xs:attribute name="href" type="urlType" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:simpleType name="contentTypeEnum">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="text"></xs:enumeration>
+            <xs:enumeration value="src"></xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+
+
+
+
+
+</xs:schema>
+
