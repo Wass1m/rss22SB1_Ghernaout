@@ -17,5 +17,7 @@
 <h4><span>Nom 1: </span> Ghernaout</h4>
 <h4><span>Prenom 2: </span> Rafik</h4>
 <h4><span>Nom 2: </span> Meghouche</h4>
+
+<a href="/help">Aide</a>
 </body>
 </html>

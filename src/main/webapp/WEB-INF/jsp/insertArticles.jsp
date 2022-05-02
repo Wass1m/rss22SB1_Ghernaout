@@ -16,7 +16,7 @@
 <%--    <div>Successfully added Book with ISBN: ${savedBook.isbn}</div>--%>
 <%--</c:if>--%>
 
-<c:url var="add_articles_url" value="/rss22/insert"/>
+<c:url var="add_articles_url" value="/rss22/ihm/insert"/>
 <%--<c:url var="add_articles_file" value="/rss22/insert/file"/>--%>
 
 <form:form cssClass="forms" action="${add_articles_url}" method="post" modelAttribute="formField">

@@ -12,6 +12,7 @@
 </head>
 <body>
 <h1>RS22 HELP</h1>
+<a href="/">Retour accueil</a>
 <table>
     <thead>
     <th>URL</th>
@@ -20,22 +21,22 @@
     </thead>
     <tbody>
     <tr>
-        <td>/</td>
+        <td ><a href="/">/</a></td>
         <td>GET</td>
         <td>Format attendu: Aucune <br />Format de retour: HTML</td>
     </tr>
     <tr>
-        <td>/help</td>
+        <td ><a href="/help">/help</a></td>
         <td>GET</td>
         <td>Format attendu: Aucune <br />Format de retour: HTML</td>
     </tr>
     <tr>
-        <td>/rss22/resume/xml</td>
+        <td ><a href="/rss22/resume/xml">/rss22/resume/xml </a></td>
         <td>GET</td>
         <td>Format attendu: Aucune <br />Format de retour: Flux XML</td>
     </tr>
     <tr>
-        <td>/rss22/resume/html</td>
+        <td ><a href="/rss22/resume/html">/rss22/resume/html</a></td>
         <td>GET</td>
         <td>Format attendu: Aucune <br />Format de retour: Flux HTML</td>
     </tr>
@@ -47,7 +48,7 @@
     <tr>
         <td>/rss22/resume/html/{guid}</td>
         <td>GET</td>
-        <td>Format attendu: Aucune <br />Format de retour: Flux XML</td>
+        <td>Format attendu: Aucune <br />Format de retour: Flux HTML</td>
     </tr>
     <tr>
         <td>/rss22/insert</td>

@@ -1,5 +1,11 @@
 <item>
-    <guid>87654321-4321-4321-4321-210987654321</guid>
-    <title>Mon second article</title>
-    <published>2022-04-06T10:30:00</published>
+    <guid>00930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+    <title>Je suis un article seul</title>
+    <category term="Tech Media"/>
+    <published>2021-04-30T09:50:20</published>
+    <content type="text">Projet Annuel 2022</content>
+    <author>
+        <name>Meghouche ghernaout</name>
+        <email>binome@univ-rouen.fr</email>
+    </author>
 </item>

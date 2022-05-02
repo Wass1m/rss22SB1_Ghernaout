@@ -143,6 +143,19 @@
         </author>
     </item>
 
+    <item>
+        <guid>108930548-eaf4-4f78-a33e-3fe6afebd20a</guid>
+        <title>Additional La "rapide" decrue des inegalites entre les ...</title>
+        <category term="Societe"/>
+        <published>2022-04-16T18:50:20</published>
+        <image href="https://static.papergeek.fr/2018/10/fichier-xml.jpg" type="JPG"  alt=""/>
+
+        <content type="text">Transformation d'un flux XML avec XSLT V1.0</content>
+        <author>
+            <name>Ghernaout</name>
+        </author>
+    </item>
+
 
 </rss22:feed>
 

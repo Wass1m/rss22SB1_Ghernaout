@@ -43,9 +43,9 @@ public class Feed {
 
 
     public Feed(List<Item> item) {
-        this.title = "Articles";
+        this.title = "Projet Annuel Feed";
         this.copyright = "Binome Ghernaout Meghouche";
-        this.pubDate = "2022-04-28T09:50:20";
+        this.pubDate = "2022-04-30T09:50:20";
         this.link = new Link("self","", "");
         this.items = item;
         this.lang = "fr-007";

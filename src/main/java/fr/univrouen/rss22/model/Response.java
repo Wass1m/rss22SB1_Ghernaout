@@ -2,6 +2,9 @@ package fr.univrouen.rss22.model;
 
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -18,9 +21,11 @@ public class Response {
     private String status;
     @XmlElement
     private String description;
-
+    @XmlElement(name = "addedGuid")
+    @JsonProperty("addedGuid")
     private List<String> addedGuids;
-
+    @XmlElement(name = "refusedGuid")
+    @JsonProperty("refusedGuid")
     private List<String> refusedGuids;
 
     public Response() {
@@ -69,6 +74,7 @@ public class Response {
         this.description = description;
     }
 
+    @JacksonXmlElementWrapper(useWrapping = false)
     public List<String> getAddedGuids() {
         return addedGuids;
     }
@@ -77,6 +83,7 @@ public class Response {
         this.addedGuids = addedGuids;
     }
 
+    @JacksonXmlElementWrapper(useWrapping = false)
     public List<String> getRefusedGuids() {
         return refusedGuids;
     }

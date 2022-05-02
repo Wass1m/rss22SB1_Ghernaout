@@ -36,7 +36,7 @@
         <td>${article.title}</td>
         <td>${article.published}</td>
         <td class="actions">
-            <form:form action="/rss22/delete/${article.guid}" method="post">
+            <form:form action="/rss22/delete/ihm/${article.guid}" method="post">
             <input type="submit" value="Supprimer"/>
         </form:form>
         <a href="/rss22/resume/html/${article.guid}">Afficher</a>
