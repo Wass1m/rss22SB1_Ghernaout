@@ -247,6 +247,23 @@ import java.util.Optional;
     }
 
 
+    // Retourne la liste des articles resume dans une page HTML pour l'IHM
+    @RequestMapping(value = { "/rss22/resume/react/html" }, method = RequestMethod.GET)
+    @ResponseBody
+    public String getArticleResumeIHM() throws JsonProcessingException {
+        List<Item> itemList = feedRepository.findAll();
+        List<ResumeItem> itemResumeList = new ArrayList<ResumeItem>();
+        for (Item item : itemList) {
+            ResumeItem resumeItem = new ResumeItem(item.getGuid(), item.getPublished(), item.getTitle());
+            itemResumeList.add(resumeItem);
+        }
+
+        ObjectMapper mapper = new ObjectMapper();
+        String json = mapper.writeValueAsString(itemResumeList);
+        return json;
+    }
+
+
 
     }
 
