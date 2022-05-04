@@ -26,15 +26,6 @@ public class IndexController {
         modelAndView.setViewName("help");
         return modelAndView;
     }
-
-    //Retourne la page d'insertion des articles
-//    @GetMapping("/insertArticles")
-//    public ModelAndView insert(Model model) {
-//        ModelAndView modelAndView = new ModelAndView();
-//        model.addAttribute("formField", new FormField());
-//        modelAndView.setViewName("insertArticles");
-//        return modelAndView;
-//    }
-
+    
 
 }

@@ -43,7 +43,10 @@ import java.util.Optional;
 
 
     /**
-     *
+     * RETOURNE LISTE DES ARTICLES DANS LA BDD
+     * /rss22/resume/xml
+     * GET
+     * RETOURNE FLUX XML
      */
 
 
@@ -60,6 +63,14 @@ import java.util.Optional;
         }
         return itemResumeList;
     }
+
+
+    /**
+     * RETOURNE LISTE DES ARTICLES DANS LA BDD
+     * /rss22/resume/html
+     * GET
+     * RETOURNE FLUX HTML
+     */
 
 
     // Meme chose que getResumeItem sauf que les ajoute des un feed rss22
@@ -102,6 +113,12 @@ import java.util.Optional;
     }
 
 
+    /**
+     * RETOURNE ARTICLE PAR GUID
+     * /rss22/resume/xml/{guid}
+     * GET
+     * RETOURNE FLUX XML
+     */
 
     // Retourne un article dans un flux xml rss22   (Feed)
     @GetMapping(value = "/rss22/resume/xml/{guid}", produces="application/xml")
@@ -147,6 +164,13 @@ import java.util.Optional;
 
     }
 
+
+    /**
+     * RETOURNE ARTICLE PAR GUID
+     * /rss22/html/{guid}
+     * GET
+     * RETOURNE FLUX HTML
+     */
 
 
     // Retourne un article dans une page HTML pour une petite IHM JSP
@@ -220,86 +244,6 @@ import java.util.Optional;
 
 
 
-    }
-
-
-    // Retourne la liste des articles resume dans une page HTML comme REST
-    @RequestMapping(value = { "/rss22/resume/ihm/html" }, method = RequestMethod.GET)
-    @ResponseBody
-    public ModelAndView getArticleResume(Model model) {
-        List<Item> itemList = feedRepository.findAll();
-        List<ResumeItem> itemResumeList = new ArrayList<ResumeItem>();
-        for (Item item : itemList) {
-            ResumeItem resumeItem = new ResumeItem(item.getGuid(), item.getPublished(), item.getTitle());
-            itemResumeList.add(resumeItem);
-        }
-
-        ModelAndView modelAndView = new ModelAndView();
-        model.addAttribute("articles", itemResumeList);
-        modelAndView.setViewName("resume");
-        return modelAndView;
-    }
-
-
-
-    // Retourne la liste des articles resume dans une page HTML pour l'IHM
-    @RequestMapping(value = { "/rss22/resume/react/html" }, method = RequestMethod.GET)
-    @ResponseBody
-    public String getArticleResumeIHM() throws JsonProcessingException {
-        List<Item> itemList = feedRepository.findAll();
-        List<ResumeItem> itemResumeList = new ArrayList<ResumeItem>();
-        for (Item item : itemList) {
-            ResumeItem resumeItem = new ResumeItem(item.getGuid(), item.getPublished(), item.getTitle());
-            itemResumeList.add(resumeItem);
-        }
-
-        ObjectMapper mapper = new ObjectMapper();
-        String json = mapper.writeValueAsString(itemResumeList);
-        return json;
-    }
-
-
-    // Retourne un article dans une page HTML pour une petite IHM JSP
-    @GetMapping(value = "/rss22/html/ihm/{guid}", produces="application/xml")
-    public ModelAndView getItemByIdHtmlIHM(@PathVariable String guid, Model model) throws JsonProcessingException {
-        Optional<Item> item = feedRepository.findById(guid);
-        ModelAndView modelAndView = new ModelAndView();
-        Response response;
-
-        if (item.isPresent()) {
-            Item returnedItem = item.get();
-            response = new Response(returnedItem.getGuid(), "GET", "ARTICLE");
-            model.addAttribute("myItem", returnedItem);
-            modelAndView.setViewName("item");
-        } else {
-            response = new Response("ERR_GET", "ERROR", "ARTICLE : " + guid);
-            model.addAttribute("response", response);
-            modelAndView.setViewName("info");
-        }
-
-        return modelAndView;
-
-    }
-
-
-
-    // Retourne un article dans une page HTML pour notre service principal (sera servi au client)
-    @GetMapping(value = "/rss22/html/react/{guid}", produces="application/xml")
-    public String getItemByIdHtmlRest(@PathVariable String guid, Model model) throws JsonProcessingException {
-        Optional<Item> item = feedRepository.findById(guid);
-        Response response;
-        String json = "";
-        ObjectMapper mapper = new ObjectMapper();
-
-        if (item.isPresent()) {
-            Item returnedItem = item.get();
-            response = new Response(returnedItem.getGuid(), "GET", "ARTICLE");
-            json = mapper.writeValueAsString(returnedItem);
-        } else {
-            response = new Response("ERR_GET", "ERROR", "ARTICLE : " + guid);
-            json = mapper.writeValueAsString(response);
-        }
-        return json;
     }
 
 

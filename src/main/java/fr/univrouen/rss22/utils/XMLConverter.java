@@ -9,6 +9,8 @@ import java.io.StringReader;
 
 public class XMLConverter {
 
+
+    //    PERMET DE CONVERTIR UN STRING EN OBJET (DOCUMENT) XML
     public Document convertStringToXMLDocument(String xmlString)
     {
         //Parser that produces DOM object trees from XML content
