@@ -1,0 +1,292 @@
+{
+	"info": {
+		"_postman_id": "9b08b1c9-aebf-4bb7-87c0-26699dbc4181",
+		"name": "RSS22_MEGHOUCHE_GHERNAOUT",
+		"description": "API REST PROJET ANNUEL XML - BINOME MEGHOUCHE GHERNAOUT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET / http://{{server}}/",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{server}}/",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						""
+					]
+				},
+				"description": "page d'accueil"
+			},
+			"response": []
+		},
+		{
+			"name": "HELP http://{{server}}/help",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{server}}/help",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"help"
+					]
+				},
+				"description": "page d'aide"
+			},
+			"response": []
+		},
+		{
+			"name": "http://{{server}}/rss22/resume/xml",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{server}}/rss22/resume/xml",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"rss22",
+						"resume",
+						"xml"
+					]
+				},
+				"description": "Afficher la liste des articles sous flux XML"
+			},
+			"response": []
+		},
+		{
+			"name": "http://{{server}}/rss22/resume/html",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{server}}/rss22/resume/html",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"rss22",
+						"resume",
+						"html"
+					]
+				},
+				"description": "Afficher la liste des articles sous flux HTML"
+			},
+			"response": []
+		},
+		{
+			"name": "http://{{server}}/rss22/resume/xml/{guid}",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://{{server}}/rss22/resume/xml/{guid}",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"rss22",
+						"resume",
+						"xml",
+						"{guid}"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Afficher les details d'un article sous flux XML"
+			},
+			"response": []
+		},
+		{
+			"name": "http://{{server}}/rss22/html/{guid}",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/xml"
+					}
+				],
+				"url": {
+					"raw": "http://{{server}}/rss22/html/{guid}",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"rss22",
+						"html",
+						"{guid}"
+					]
+				},
+				"description": "Afficher les details d'un article flux HTML"
+			},
+			"response": []
+		},
+		{
+			"name": "http://{{server}}/rss22/insert",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss22:feed lang=\"fr-007\" xmlns:rss22=\"http://univrouen.fr/rss22\" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xsi:schemaLocation=\"http://univrouen.fr/rss22\">\n    <title>TP4 - Flux RSS22</title>\n    <pubDate>2022-03-12T09:50:20</pubDate>\n    <copyright>Wassim Ghernaout</copyright>\n    <link href=\"\" rel=\"self\" type=\"\"/>\n    <item>\n        <guid>992930548-eaf4-4f78-a33e-3fe6afebd20a</guid>\n        <title>Je suis un article minimal X</title>\n        <category term=\"Tech Media\"/>\n        <published>2021-06-27T09:50:20</published>\n        <content type=\"text\">Projet Annuel 2022</content>\n        <author>\n            <name>Rafik Meghouche</name>\n            <email>rafik.meghouche@univ-rouen.fr</email>\n        </author>\n    </item>\n    <item>\n        <guid>983930548-eaf4-4f78-a33e-3fe6afebd20a</guid>\n        <title>Je suis un article minimal Y</title>\n        <category term=\"Societe\"/>\n        <published>2021-06-27T09:50:20</published>\n        <content type=\"text\">Projet Annuel 2022</content>\n        <author>\n            <name>Wassim Ghernaout</name>\n            <email>mohamed-wassim.ghernaout@univ-rouen.fr</email>\n        </author>\n    </item>\n    <item>\n        <guid>18930548-eaf4-4f78-a33e-3fe6afebd20a</guid>\n        <title>Je suis un article minimal 3</title>\n        <category term=\"Tech Media\"/>\n        <published>2021-04-28T09:50:20</published>\n        <content type=\"text\">Projet Annuel 2022</content>\n        <author>\n            <name>Rafik Meghouche</name>\n            <email>rafik.meghouche@univ-rouen.fr</email>\n        </author>\n    </item>\n</rss22:feed>\n\n",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{server}}/rss22/insert",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"rss22",
+						"insert"
+					]
+				},
+				"description": "Inserer un nouvel article"
+			},
+			"response": []
+		},
+		{
+			"name": "http://{{server}}/rss22/delete/{guid}",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://{{server}}/rss22/delete/{guid}",
+					"protocol": "http",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"rss22",
+						"delete",
+						"{guid}"
+					]
+				},
+				"description": "Suppression d’un article "
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server",
+			"value": "ghernmegh-projet.cleverapps.io"
+		}
+	]
+}
